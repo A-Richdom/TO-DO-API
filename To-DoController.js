@@ -3,7 +3,7 @@ const { resHandler } = require('./Utility/ResHandler');
 require('dotenv').config()
 
 
-//CREATE TO-DOO
+//CREATE TO-DO
 const createToDo = async(req, res) => {
     const {title, description} = req.body
     
