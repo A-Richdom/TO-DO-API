@@ -3,7 +3,7 @@ const { resHandler } = require('./Utility/ResHandler');
 require('dotenv').config()
 
 
-//CREATE TO-DO
+//CREATE TO-DOO
 const createToDo = async(req, res) => {
     const {title, description} = req.body
     
@@ -56,7 +56,7 @@ const deleteToDo = async(req, res) => {
         return resHandler({ res, statusCode: 200, data: response })
     } 
     catch (error) {
-        // res.status(500).json(error)
+        
         return resHandler({ res, statusCode: 400, data: "INVALID ID"})
     }
 };
