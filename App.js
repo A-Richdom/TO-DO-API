@@ -1,7 +1,8 @@
 const express = require('express')
 const cors = require('cors')
 const { default: mongoose } = require('mongoose')
-const ToDoRoute = require('./ToDoRoute')
+const ToDoRoute = require('./Routes/To-DoRoute')
+const MuiRoute = require('./Routes/MuiRoute')
 require('dotenv').config()
 
 
@@ -15,6 +16,7 @@ app.use(express.json());
 
 
 app.use('/todo', ToDoRoute)
+app.use('/mui', MuiRoute)
 
 
 const port = 6000

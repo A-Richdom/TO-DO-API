@@ -1,5 +1,5 @@
 const express = require('express');
-const { createToDo, getAllToDo, getSingleToDo, deleteToDo, updateToDo } = require('./To-DoController');
+const { createToDo, getAllToDo, getSingleToDo, deleteToDo, updateToDo } = require('../Controllers/To-DoController');
 
 
 

@@ -1,5 +1,5 @@
-const ToDo = require('./To-DoSchema');
-const { resHandler } = require('./Utility/ResHandler');
+const ToDo = require('../Schemas/To-DoSchema');
+const { resHandler } = require('../Utility/ResHandler');
 require('dotenv').config()
 
 
@@ -10,7 +10,8 @@ const createToDo = async(req, res) => {
     try {
         const response = await ToDo.create({title, description})
 
-        res.status(200).json(response)
+        // res.status(200).json(response)
+        return resHandler({res, statusCode: 200, data: response})
     } 
     catch (error) {
         res.status(500).json(error)
